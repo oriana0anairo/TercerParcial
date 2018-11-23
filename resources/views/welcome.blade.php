@@ -24,16 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand"
-                href="  
-                    @guest
-                        {{ url('/') }}
-                    @else
-                        @if(Auth::user()->is_admin)
-                            {{ url('/admin/dashboard') }}
-                        @else
-                            {{ url('/user/dashboard') }}
-                        @endif
-                    @endguest"
+                href=""
                 >
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -87,11 +78,6 @@
                             <div class="card-header">@yield('header')</div>
 
                             <div class="card-body">
-                                @if (session('status'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ session('status') }}
-                                    </div>
-                                @endif
                                 @yield('content')
                             </div>
                         </div>

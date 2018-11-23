@@ -24,18 +24,9 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand"
-                href="  
-                    @guest
-                        {{ url('/') }}
-                    @else
-                        @if(Auth::user()->is_admin)
-                            {{ url('/admin/dashboard') }}
-                        @else
-                            {{ url('/user/dashboard') }}
-                        @endif
-                    @endguest"
+                href=""
                 >
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Parcial') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -44,50 +35,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
-                    </ul>
-                    
-                    <!-- Center Side Of Navbar -->
-                    @guest
-
-                    @else
-                        <div class="mx-auto" style="width: auto;">
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                        @if (Auth::user()->is_admin)
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('adminServicios') }}">Creación de Servicios</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('adminPaquetes') }}">Creación de Paquetes</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('adminFacturas') }}">Emitir Facturas</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('adminAutorizacion') }}">Autorizaciones</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('adminUsuarios') }}">Administración de Usuarios</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('adminProgramacion') }}">Programación</a>
-                                  </li>
-                        @else
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('userContrar') }}">Contratar Servicios</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('userFactura') }}">Factura</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('userProgramacion') }}">Programación</a>
-                                  </li>
-                        @endif
-                                </ul>
-                            </div>
-                        </div>
-                    @endguest
 
                     </ul>
                 </div>
@@ -102,11 +49,6 @@
                             <div class="card-header">@yield('header')</div>
 
                             <div class="card-body">
-                                @if (session('status'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ session('status') }}
-                                    </div>
-                                @endif
                                 @yield('content')
                             </div>
                         </div>
