@@ -57,7 +57,7 @@ class ControllerLibros extends BaseController
 		public function edit($id){
 
 			$libro=libros::find($id);
-			return view(libros)->with("libro",$libro);
+			return view('actualizar')->with("libro",$libro);
 		}
 
 }
