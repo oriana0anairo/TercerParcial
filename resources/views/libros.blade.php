@@ -38,7 +38,7 @@
   
 
       <td>
-          <a href="{{Route('editarLibro',$libro->id)}}" class='btn btn-success'>Editar</a>
+          <a href="{{route('editarLibro',$libro-> id)}}" class='btn btn-success'>Editar</a>
       </td>
        </tr>
 

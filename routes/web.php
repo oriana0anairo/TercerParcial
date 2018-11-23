@@ -19,12 +19,12 @@ Route::get('/', function () {
 Route::get("/libros","controllerLibros@index")->name("vista.libro");
 Route::get("/agregar","controllerLibros@vistaLibros")->name("vista.edit");
 Route::post("/libros","controllerLibros@store")->name("agregar");
-Route::get("/libros/edit","controllerLibros@edit")->name("editarLibro");
-Route::put("/libros/actualizar","controllerLibros@update")->name("libors.put");
+Route::get("/libros/{id}/edit","controllerLibros@edit")->name("editarLibro");
+Route::put("/libros/actualizar","controllerLibros@update")->name("libros.put");
 
 
 Route::get("/estudiante","controllerEstudiante@index")->name("vista.estudiante");
-Route::get("/agregarEstudiante","controllerLibros@vistaEstudiante")->name("estudiante.edit");
+Route::get("/agregarEstudiante","controllerEstudiante@vistaEstudiante")->name("estudiante.edit");
 Route::post("/estudiante","controllerEstudiante@store")->name("agregar.estudiante");
 Route::get("/estudiante/edit","controllerEstudiante@edit")->name("editarEstudiante");
 Route::put("/Estudiante/actualizar","controllerEstudiante@update")->name("estudiante.put");
