@@ -25,7 +25,7 @@
       <th scope="row">{{$emp->id}}</th>
       <td>{{$emp->nombre}}</td>
       <td>{{$emp->edad}}</td>
-      <td>{{$emp->cedula}</td>
+      <td>{{$emp->cedula}}</td>
       <td>{{$emp->fecha}}</td>
           <a href="{{Route('editarEmpleado')}}" class='btn btn-success'>Editar</a>
       </td>
@@ -34,4 +34,4 @@
 
     @endforeach
 </div>
-endsection
+@endsection

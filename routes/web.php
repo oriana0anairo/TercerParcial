@@ -31,7 +31,7 @@ Route::put("/Estudiante/actualizar","controllerEstudiante@update")->name("estudi
 
 
 Route::get("/empleado","controllerEmpleado@index")->name("vista.empleado");
-Route::get("/agregarEmpleado","controllerEmpleado@vistaEmpleado")->name("empleado.edit");
+Route::get("/agregarEmpleado","controllerEmpleado@vistaEmpleados")->name("empleado.edit");
 Route::post("/empleado","controllerEmpleado@store")->name("agregar.empleado");
 Route::get("/empleado/edit","controllerEmpleado@edit")->name("editarEmpleado");
 Route::put("/empleado/actualizar","controllerEmpleado@update")->name("empleado.put");

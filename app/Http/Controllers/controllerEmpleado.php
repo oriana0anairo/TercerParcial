@@ -8,14 +8,14 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\empleado;
 
-class controllerEmpleados extends BaseController
+class controllerEmpleado extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
 
 
-    public function vistaLibros(){
-    	return view('agregar');
+    public function vistaEmpleados(){
+    	return view('agregarEmpleados');
     }
 
 
