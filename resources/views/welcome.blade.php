@@ -49,16 +49,10 @@
                                     <a class="nav-link" href="{{route('vista.libro')}}">Libros</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="">Factura</a>
+                                    <a class="nav-link" href="{{route('vista.estudiante')}}">Estudiante</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="">Programación</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="">Programación</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="">Programación</a>
+                                    <a class="nav-link" href="{{route('vista.empleado')}}">Empleado</a>
                                   </li>
                                 </ul>
                             </div>
