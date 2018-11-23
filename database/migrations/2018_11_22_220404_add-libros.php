@@ -17,7 +17,7 @@ class AddLibros extends Migration
             $table->increments('id');
             $table->string("nombre");
             $table->string("editorial");
-            $table->year("anio");
+            $table->integer("anio");
             $table->string("ubicacion");
             $table->string("autor");
             $table->enum("tipo", ["normal", "reserva"]);
